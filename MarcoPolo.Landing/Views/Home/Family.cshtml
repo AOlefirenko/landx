@@ -2,11 +2,11 @@
 <html>
     <head>
         <title>Xme! - будь в курсе, где сейчас твой ребёнок!</title>
-        <link href="~/css/bootstrap.css" rel='stylesheet' type='text/css' />
+        <link href="../../css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="/js/jquery.min.js"></script>
+        <script src="../../js/jquery.min.js"></script>
         <!-- Custom Theme files -->
-        <link href="/css/style.css" rel="stylesheet" />
+        <link href="../../css/style.css" rel="stylesheet" />
         <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
@@ -15,8 +15,8 @@
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
         <!---//webfonts--->
         <!---- start-smoth-scrolling---->
-        <script type="text/javascript" src="~/js/move-top.js"></script>
-        <script type="text/javascript" src="~/js/easing.js"></script>
+        <script type="text/javascript" src="../../js/move-top.js"></script>
+        <script type="text/javascript" src="../../js/easing.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 $(".scroll").click(function(event) {
@@ -36,8 +36,8 @@
                     <!----sreen-gallery-cursual---->
                     <div class="sreen-gallery-cursual">
                         <!-- requried-jsfiles-for owl -->
-                        <link href="~/css/owl.carousel.css" rel="stylesheet">
-                        <script src="~/js/owl.carousel.js"></script>
+                        <link href="../../css/owl.carousel.css" rel="stylesheet">
+                        <script src="../../js/owl.carousel.js"></script>
                         <script>
                             $(document).ready(function() {
                                 $("#owl-demo").owlCarousel({
@@ -53,69 +53,77 @@
                         <!-- //requried-jsfiles-for owl -->
                         <div id="owl-demo" class="owl-carousel">
                             <div class="item">
-                                <img src="~/images/flphone.png" title="name" width="370"/>
+                                <img src="../../images/flphone.png" title="name" width="370"/>
                             </div>
 					                
                         </div>
                     </div>
                 </div>
                 <div class="col-md-7 header-right">
-                    <a href="#"><img src="~/images/logo.png" title="X-Messenger" /><span class="logo-txt">me!</span></a>
+                    <a href="#"><img src="../../images/logo.png" title="X-Messenger" /><span class="logo-txt">me!</span></a>
                     <h2>Где сейчас ваш ребёнок?</h2>
                     <ul class="descr-list" style="margin-top: 30px;">
-                        <li class="descr-list_i">Определение точного адреса</li>
-                        <li class="descr-list_i">Информация о ребёнке доступна только вам</li>
-                        <li class="descr-list_i">Условие: У вашего ребенка должен быть Android телефон</li>
-                    </ul>
-                    <ul class="big-btns">
-                        <li><a class="btn-g" href="#" id="download">Скачать</a></li>
-                        <li><a class="btn-gr" href="#"  id="show">Посмотреть</a></li>
-                    </ul>
-                    <ul class="usefull-for">
-                        <li><a class="u-apple" href="#" id="apple"><span> </span></a></li>
-                        <li><a class="u-and"  id="android"><span> </span></a></li>
 
+                        <li class="descr-list_i">Определение точного адреса</li>
+                        <li class="descr-list_i">Оповещение об опасных зонах</li>
+                        <li class="descr-list_i">Информация о ребёнке доступна только вам</li>
+                        <li class="descr-list_i">Условие: У вашего ребенка должен быть Android или iOS телефон</li>
                     </ul>
+                    <!--<ul class="big-btns">-->
+                        <!--<li><a class="btn-g" href="#" id="download">Скачать</a></li>-->
+                        <!--<li><a class="btn-gr" href="#"  id="show">Посмотреть</a></li>-->
+                    <!--</ul>-->
+                    <form id="form" method="post" action="signup">
+                        <input type="email" placeholder="Оставьте нам свой E-mail" required id="email" name="email" class="form-control" style="width: 300px; display: inline-block;">
+                        <button type="submit" id="send" class="btn btn-success" >Получить приглашение</button>
+                    </form>
+                    <!--<ul class="usefull-for" style="text-align: center; ">-->
+                        <!--<li><a class="u-apple" href="#" id="apple"><span> </span></a></li>-->
+                        <!--<li><a class="u-and"  id="android"><span> </span></a></li>-->
+                    <!--</ul>-->
+
+                    <div style="margin-top:20px ;margin-left: 150px">
+                        <script type="text/javascript">
+                            (function() {
+                                if (window.pluso) if (typeof window.pluso.start == "function") return;
+                                if (window.ifpluso == undefined) {
+                                    window.ifpluso = 1;
+                                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                                    s.type = 'text/javascript';
+                                    s.charset = 'UTF-8';
+                                    s.async = true;
+                                    s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
+                                    var h = d[g]('body')[0];
+                                    h.appendChild(s);
+                                }
+                            })();
+                        </script>
+                        <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=04" data-services="vkontakte,facebook,twitter"></div>
+                    </div>
                 </div>
                 <div class="clearfix"> </div>
+
             </div>
         </div>
         <!---- header ---->
 			
-        <div class="clearfix"> </div>
-        <div id="sign-up">
-            <div class="container" style="text-align: center;">
-                <p class="signup">Привет, приложение вот-вот появится в App Store!
-                    <br>
-                    Если хочешь получить его раньше остальных, пришли нам свой e-mail. 
-                    <br>Спама не будет, обещаем!=)
-                </p>
-                <form id="form" method="post" action="signup">
-                    <input type="email" placeholder="Оставьте нам свой E-mail" required id="email" name="email" class="form-control" style="width: 300px; display: inline-block;">
-                    <button type="submit" id="send" class="btn btn-success" disabled>Получить приглашение</button>
-                </form>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
+        <!--<div class="clearfix"> </div>-->
+        <!--<div id="sign-up">-->
+            <!--<div class="container" style="text-align: center;">-->
+                <!--<p class="signup">Привет, приложение вот-вот появится в App Store!-->
+                    <!--<br>-->
+                    <!--Если хочешь получить его раньше остальных, пришли нам свой e-mail. -->
+                    <!--<br>Спама не будет, обещаем!=)-->
+                <!--</p>-->
+                <!--<form id="form" method="post" action="signup">-->
+                    <!--<input type="email" placeholder="Оставьте нам свой E-mail" required id="email" name="email" class="form-control" style="width: 300px; display: inline-block;">-->
+                    <!--<button type="submit" id="send" class="btn btn-success" disabled>Получить приглашение</button>-->
+                <!--</form>-->
+                <!--<div class="clearfix"> </div>-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="social-icons">
-            <p>
-                <script type="text/javascript">
-                    (function() {
-                        if (window.pluso) if (typeof window.pluso.start == "function") return;
-                        if (window.ifpluso == undefined) {
-                            window.ifpluso = 1;
-                            var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                            s.type = 'text/javascript';
-                            s.charset = 'UTF-8';
-                            s.async = true;
-                            s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
-                            var h = d[g]('body')[0];
-                            h.appendChild(s);
-                        }
-                    })();
-                </script>
-                <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=04" data-services="vkontakte,facebook,twitter"></div>
-            </p>
+
             <!---- footer-links ---->
             <div class="footer-links">
                 <ul>
@@ -204,14 +212,14 @@
                 var $email = $('#email');
                 var $send = $('#send');
 
-                function validate(e) {
-                    setTimeout(function() {
-                        var val = e.currentTarget.value;
-                        if (!val || val.indexOf('@Html.Raw("@")') == -1 || val.indexOf('.') == -1)
-                            $send.prop('disabled', true);
-                        else $send.prop('disabled', false);
-                    }, 100);
-                }
+//                function validate(e) {
+//                    setTimeout(function() {
+//                        var val = e.currentTarget.value;
+//                        if (!val || val.indexOf('@Html.Raw("@")') == -1 || val.indexOf('.') == -1)
+//                            $send.prop('disabled', true);
+//                        else $send.prop('disabled', false);
+//                    }, 100);
+//                }
 
                 $email.on('paste', validate);
                 $email.on('cut', validate);
