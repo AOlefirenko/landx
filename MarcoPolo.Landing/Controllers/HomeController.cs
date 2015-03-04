@@ -14,10 +14,11 @@ namespace MarcoPolo.Landing.Controllers
         private MongoCollection<BsonDocument> _collection;
         //
         // GET: /Home/
+        private int _count = 1242;
+        private int _totalCount = 5683;
 
         public ActionResult Index()
         {
-            InitDB();
             return View(GetName(Request.Url.Host));
         }
 
@@ -52,7 +53,22 @@ namespace MarcoPolo.Landing.Controllers
             InitDB();
             var email = Request.Form.Get("email");
             _collection.Insert(new BsonDocument { { "email", email } });
+            if (Request.Url.Host.Contains("family")) 
+                return RedirectToAction("Welcome");
             return new EmptyResult();
+        }
+        
+        public ActionResult Welcome()
+        {
+            InitDB();
+            var count = _collection.Count();
+            ViewBag.count = _count + count;
+            ViewBag.total = _totalCount - count;
+            return View("Family_step2");
+        }
+        public ActionResult Thanx()
+        {
+            return View("Thanks_family");
         }
     }
 }

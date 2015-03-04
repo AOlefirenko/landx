@@ -185,6 +185,8 @@
     <Content Include="Views\Home\Business.cshtml" />
     <Content Include="Views\Home\Friends.cshtml" />
     <Content Include="Views\Home\Terms.cshtml" />
+    <Content Include="Views\Home\Family_step2.cshtml" />
+    <Content Include="Views\Home\Thanks_family.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

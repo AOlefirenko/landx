@@ -18,6 +18,16 @@ namespace MarcoPolo.Landing
                 defaults: new { controller = "Home", action = "SignUp", id = UrlParameter.Optional }
             );
             routes.MapRoute(
+                name: "welcome",
+                url: "welcome",
+                defaults: new { controller = "Home", action = "Welcome", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "thanks",
+                url: "thanks",
+                defaults: new { controller = "Home", action = "Thanx", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
               name: "terms",
               url: "terms",
               defaults: new { controller = "Home", action = "Terms", id = UrlParameter.Optional }
