@@ -197,14 +197,14 @@
                 var $email = $('#email');
                 var $send = $('#send');
 
-//                function validate(e) {
-//                    setTimeout(function() {
-//                        var val = e.currentTarget.value;
-//                        if (!val || val.indexOf('@Html.Raw("@")') == -1 || val.indexOf('.') == -1)
-//                            $send.prop('disabled', true);
-//                        else $send.prop('disabled', false);
-//                    }, 100);
-//                }
+                function validate(e) {
+                    setTimeout(function() {
+                        var val = e.currentTarget.value;
+                        if (!val || val.indexOf('@Html.Raw("@")') == -1 || val.indexOf('.') == -1)
+                            $send.prop('disabled', true);
+                        else $send.prop('disabled', false);
+                    }, 100);
+                }
 
                 $email.on('paste', validate);
                 $email.on('cut', validate);
