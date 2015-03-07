@@ -26,6 +26,8 @@ namespace MarcoPolo.Landing.Controllers
         {
             if (host.Contains("family"))
                 return "Family";
+            if (host.Contains("mama"))
+                return "Family";
             if (host.Contains("active"))
                 return "Active";
             if (host.Contains("business"))
