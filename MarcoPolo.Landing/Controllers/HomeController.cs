@@ -55,7 +55,7 @@ namespace MarcoPolo.Landing.Controllers
             InitDB();
             var email = Request.Form.Get("email");
             _collection.Insert(new BsonDocument { { "email", email } });
-            if (Request.Url.Host.Contains("family")) 
+            if (Request.Url.Host.Contains("mama")) 
                 return RedirectToAction("Welcome");
             return new EmptyResult();
         }
